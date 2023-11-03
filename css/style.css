@@ -1,0 +1,104 @@
+* {
+    overflow-x: hidden;
+  }
+  
+  
+  body {
+    font-family: 'Prompt', sans-serif;
+    font-size: 12.5pt;
+    /* background-color: rgb(10, 32, 50); */
+    background-image: -moz-radial-gradient(center,ellipse closest-corner,#6196af ,#0a2032 );
+    background-image: -webkit-radial-gradient(center,ellipse closest-corner,#6196af ,#0a2032 );
+    color: #ffffff;
+  }
+  
+  .text-light {
+    color: #fafafa !important;
+  }
+  
+  .space {
+    margin-top: 100px;
+  }
+  
+  .img {
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .review {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+  }
+
+  .cd-top {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    /* float: right; */
+    bottom: 40px;
+    right: 10px;
+    border-radius: 50px; 
+    /* z-index: -1; */
+    color: #0a2032;
+    font-size: 20pt;
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+    /* padding: 5px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    /* text-indent: 100%; */
+    white-space: nowrap;
+    /* background:url(../img/arrow-top.png) 0 0 no-repeat; */
+    background-color: #c9e5ff; 
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+  }
+  .cd-top.cd-is-visible, .cd-top.cd-fade-out, .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+  .cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+  }
+  .cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .8;
+  }
+  .cd-top:hover {
+    background-color: #c7cace;
+    color: #0a2032;
+    opacity: 1;
+  }
+  
+  .gradiant-bg{
+    font-size: 72px;
+    font-weight: bold;
+    text-shadow: -7px 5px #c9e5ff;
+    background: linear-gradient(45deg, #0a2032, #563a6d, #c04572, #ff793e, #ffa600);
+    background-size: 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: gradient 4s infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
